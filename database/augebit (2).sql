@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15/06/2025 às 01:02
+-- Tempo de geração: 15/06/2025 às 01:48
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -123,17 +123,17 @@ CREATE TABLE `funcionarios` (
   `foto` varchar(255) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `telefone` int(11) NOT NULL,
+  `telefone` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   `setor` varchar(255) NOT NULL,
-  `cpf` int(12) NOT NULL,
+  `cpf` varchar(255) NOT NULL,
   `nascimento` date NOT NULL,
   `biografia` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_secundario` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `celular` int(20) NOT NULL,
-  `cep` int(8) NOT NULL,
+  `celular` varchar(255) NOT NULL,
+  `cep` varchar(255) NOT NULL,
   `logradouro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `numero` int(11) NOT NULL,
+  `numero` varchar(255) NOT NULL,
   `complemento` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `bairro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cidade` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -148,8 +148,9 @@ CREATE TABLE `funcionarios` (
 --
 
 INSERT INTO `funcionarios` (`id`, `foto`, `nome`, `email`, `telefone`, `senha`, `setor`, `cpf`, `nascimento`, `biografia`, `email_secundario`, `celular`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `linkedin`, `github`, `instagram`) VALUES
-(20, '', 'vic', 'victorrocha0223@gmail.com', 111945786, '2512', 'RH', 0, '0000-00-00', '', '', 0, 0, '', 0, '', '', '', '', '', '', ''),
-(21, '', 'vic', 'victorrocha0223@gmail.com', 2147483647, '12345', 'Marketing', 0, '0000-00-00', '', '', 0, 0, '', 0, '', '', '', '', '', '', '');
+(20, '', 'Victor Rodrigues Cavalcante Rocha', 'victorrocha0223@gmail.com', '111945786', '2512', 'RH', '2147483647', '2007-12-25', 'amo pipoca', 'viccvalcantesenai@gmail.com', '2147483647', '8505340', 'Rua Antônio Massa', '178', 'casa', 'Jardim do Papai', 'Ferraz de Vasconcelos', 'SP', 'vic-cavalcant3', 'vic-cavalcant3', 'viccavalcant3'),
+(21, '', 'vic', 'victorrocha0223@gmail.com', '2147483647', '12345', 'Marketing', '0', '0000-00-00', '', '', '0', '0', '', '0', '', '', '', '', '', '', ''),
+(22, '', 'victor', 'victorrocha0223@gmail.com', '2147483647', '2512', 'Administrativo', '0', '0000-00-00', '', '', '0', '0', '', '0', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -288,7 +289,7 @@ ALTER TABLE `folha_pagamento`
 -- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de tabela `pontos`
